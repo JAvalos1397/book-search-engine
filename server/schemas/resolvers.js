@@ -26,9 +26,9 @@ const resolvers = {
       console.log('inside the addUser')
       const user = await User.create(args);
 
-      // if (!user) {
-      //   throw new AuthenticationError('Something went wrong')
-      // }
+      if (!user) {
+        throw new AuthenticationError('Something went wrong')
+      }
       const token = signToken(user);
       return { token, user };
     },

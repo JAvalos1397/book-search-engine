@@ -39,10 +39,10 @@ input infoBook{
 }
 
 type Mutation {
-  login(email: String, password: String): Auth
-  addUser(username: String, email: String, password: String): Auth
-  saveBook(bookInfo: infoBook): User
-  removeBook(bookId: String): User
+  login(email: String!, password: String!): Auth
+  addUser(username: String!, email: String!, password: String!): Auth
+  saveBook(bookInfo: infoBook!): User
+  removeBook(bookId: String!): User
 }
 `
 
